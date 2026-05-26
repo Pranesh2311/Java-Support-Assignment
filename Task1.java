@@ -17,6 +17,8 @@ public class Task1 {
         }
 
         for (LoanAccount account : accounts) {
+            // FIX: Null element guard — list may contain null entries
+            if (account == null) continue;
 
             // FIX: Added null check for dueDate before calling before()
             if (account.getDueDate() != null
